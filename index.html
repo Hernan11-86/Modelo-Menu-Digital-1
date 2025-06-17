@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Digital </title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-top-bar">
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú de categorías">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="search-bar">
+                <i class="fas fa-search" aria-hidden="true"></i>
+                <input type="text" id="search-input" placeholder="BUSCAR" aria-label="Buscar productos en el menú">
+            </div>
+        </div>
+        <div class="header-branding">
+            <div class="header-branding-content">
+                <img src="your-logo.png" alt="Logo de Menú Digital" class="cafe-logo">
+                <h1 class="cafe-name"></h1>
+            </div>
+            <a href="https://wa.me/XXXXXXXXXXX?text=Hola%20quiero%20hacer%20una%20consulta" target="_blank" class="whatsapp-icon-mobile" aria-label="Contactar a Caffetos por WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </header>
+
+    <nav id="sidebar" class="sidebar" aria-label="Categorías del menú">
+        <button class="close-sidebar" id="close-sidebar" aria-label="Cerrar menú de categorías">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="sidebar-menu-list">
+            <li><a href="#pasteleria-casera">Pastelería Casera</a>
+                <ul>
+                    <li><a href="#pasteleria-cuadrados">&bull; Cuadrados</a></li>
+                    <li><a href="#pasteleria-alfajores">&bull; Alfajores</a></li>
+                </ul>
+            </li>
+            <li><a href="#cafeteria">Cafetería</a>
+                <ul>
+                    <li><a href="#cafeteria-tradicionales">&bull; Tradicionales</a></li>
+                    <li><a href="#cafeteria-especiales">&bull; Especiales</a></li>
+                    <li><a href="#cafeteria-te-hebras">&bull; Té en Hebras</a></li>
+                    </ul>
+            </li>
+            <li><a href="#adicionales">Adicionales</a></li>
+            <li><a href="#bebidas">Bebidas</a>
+                <ul>
+                    <li><a href="#bebidas-jugos-naturales">&bull; Jugos Naturales</a></li>
+                    <li><a href="#bebidas-licuados">&bull; Licuados</a></li>
+                    <li><a href="#bebidas-gaseosas">&bull; Gaseosas</a></li>
+                    <li><a href="#bebidas-sin-alcohol">&bull; Sin alcohol</a></li>
+                    <li><a href="#bebidas-copas">&bull; Copas</a></li>
+                    <li><a href="#bebidas-jarras">&bull; Jarras</a></li>
+                </ul>
+            </li>
+            <li><a href="#desayunos-meriendas">Desayunos y Meriendas</a>
+                <ul>
+                    <li><a href="#desayunos-tostados">&bull; Tostados</a></li>
+                    <li><a href="#desayunos-tostadas">&bull; Tostadas</a></li>
+                    <li><a href="#desayunos-croissants">&bull; Croissants</a></li>
+                    <li><a href="#desayunos-medialunas">&bull; Medialunas</a></li>
+                    <li><a href="#desayunos-huevos-revueltos">&bull; Huevos Revueltos</a></li>
+                </ul>
+            </li>
+            <li><a href="#combos">Combos</a></li>
+            <li><a href="#sin-tacc">Sin Tacc</a></li>
+            <li><a href="#promociones">Promociones</a></li>
+            <li><a href="#almuerzos">Almuerzos</a>
+                <ul>
+                    <li><a href="#almuerzos-bruschettas">&bull; Bruschettas</a></li>
+                    <li><a href="#almuerzos-focaccias">&bull; Focaccias</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="content-wrapper" id="content-wrapper">
+        <section class="menu-category" id="pasteleria-casera">
+            <h2 class="category-title">PASTELERÍA CASERA</h2>
+            <h3 class="subcategory-title" id="pasteleria-cuadrados">&bull; Cuadrados</h3>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Cheesecake de Frutos Rojos</span>
+                </div>
+                <span class="item-price">$9.100,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Carrot Cake</span>
+                </div>
+                <span class="item-price">$7.100,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Red Velvet</span>
+                </div>
+                <span class="item-price">$8.500,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Lemon Pie Individual</span>
+                    <p class="item-description">Base de masa sablée, curd de limón y merengue italiano.</p>
+                </div>
+                <span class="item-price">$6.600,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Maracuyá Pie Individual</span>
+                    <p class="item-description">Base de masa sablée, curd de maracuyá y merengue italiano.</p>
+                </div>
+                <span class="item-price">$7.000,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Crumble de Manzanas Individual</span>
+                    <p class="item-description">Base de masa sablée con crumble de manzanas.</p>
+                </div>
+                <span class="item-price">$6.600,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Bavaroise de Lima</span>
+                    <p class="item-description">Base crocante con chocolate blanco, cremoso a base de lima y topping de crema.</p>
+                </div>
+                <span class="item-price">$9.200,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Tarta Havannet Individual</span>
+                </div>
+                <span class="item-price">$7.000,00</span>
+            </div>
+            <h3 class="subcategory-title" id="pasteleria-alfajores">&bull; Alfajores</h3>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Alfajor de Maicena</span>
+                </div>
+                <span class="item-price">$3.500,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Alfajor de Chocolate</span>
+                </div>
+                <span class="item-price">$3.800,00</span>
+            </div>
+        </section>
+
+        <section class="menu-category" id="cafeteria">
+            <h2 class="category-title">CAFETERÍA</h2>
+            <h3 class="subcategory-title" id="cafeteria-tradicionales">Tradicionales</h3>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Café Espresso</span>
+                </div>
+                <span class="item-price">$3.500,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Americano</span>
+                </div>
+                <span class="item-price">$3.800,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Café con Leche</span>
+                </div>
+                <span class="item-price">$4.000,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Café Doble</span>
+                </div>
+                <span class="item-price">$4.200,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Cortado</span>
+                </div>
+                <span class="item-price">$3.600,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Lágrima</span>
+                </div>
+                <span class="item-price">$3.700,00</span>
+            </div>
+            <h3 class="subcategory-title" id="cafeteria-especiales">Especiales</h3>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Latte Vainilla</span>
+                    <p class="item-description">Espresso, leche vaporizada y jarabe de vainilla.</p>
+                </div>
+                <span class="item-price">$4.200,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Latte Caramelo</span>
+                    <p class="item-description">Espresso, leche vaporizada y jarabe de caramelo.</p>
+                </div>
+                <span class="item-price">$4.200,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Mocaccino</span>
+                    <p class="item-description">Espresso, chocolate, leche vaporizada y crema batida.</p>
+                </div>
+                <span class="item-price">$4.500,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Capuccino Italiano</span>
+                    <p class="item-description">Espresso, leche vaporizada y espuma de leche, espolvoreado con cacao.</p>
+                </div>
+                <span class="item-price">$4.300,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Flat White</span>
+                    <p class="item-description">Doble shot de espresso con leche vaporizada sin espuma.</p>
+                </div>
+                <span class="item-price">$4.400,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Café Helado</span>
+                    <p class="item-description">Espresso frío, leche y hielo.</p>
+                </div>
+                <span class="item-price">$4.800,00</span>
+            </div>
+            <h3 class="subcategory-title" id="cafeteria-te-hebras">Té en Hebras</h3>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Té Negro Ceylon</span>
+                    <p class="item-description">Clásico té negro de Sri Lanka, intenso y aromático.</p>
+                </div>
+                <span class="item-price">$3.800,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Té Verde Sencha</span>
+                    <p class="item-description">Té verde japonés, sabor fresco y ligeramente vegetal.</p>
+                </div>
+                <span class="item-price">$4.000,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Té Rojo Pu-erh</span>
+                    <p class="item-description">Té fermentado con notas terrosas y dulzonas.</p>
+                </div>
+                <span class="item-price">$4.200,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Té de Frutos Rojos</span>
+                    <p class="item-description">Mezcla de té negro con trozos de fresas, frambuesas y moras.</p>
+                </div>
+                <span class="item-price">$4.100,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Té de Jengibre y Limón</span>
+                    <p class="item-description">Refrescante mezcla con toques cítricos y picantes.</p>
+                </div>
+                <span class="item-price">$4.000,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Manzanilla y Miel</span>
+                    <p class="item-description">Infusión relajante de manzanilla con un toque dulce de miel.</p>
+                </div>
+                <span class="item-price">$3.900,00</span>
+            </div>
+        </section>
+
+        <section class="menu-category" id="bebidas">
+            <h2 class="category-title">BEBIDAS</h2>
+            <h3 class="subcategory-title" id="bebidas-jugos-naturales">Jugos Naturales</h3>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Jugo de Naranja</span>
+                </div>
+                <span class="item-price">$4.000,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Jugo de Pomelo</span>
+                </div>
+                <span class="item-price">$4.000,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Jugo Multifruta</span>
+                </div>
+                <span class="item-price">$4.200,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Jugo de Limonada con Menta y Jengibre</span>
+                </div>
+                <span class="item-price">$4.500,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Jugo de Frutos Rojos</span>
+                </div>
+                <span class="item-price">$4.600,00</span>
+            </div>
+
+            <h3 class="subcategory-title" id="bebidas-licuados">Licuados</h3>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Licuado de Banana</span>
+                    <p class="item-description">Con leche o agua.</p>
+                </div>
+                <span class="item-price">$4.800,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Licuado de Frutilla</span>
+                    <p class="item-description">Con leche o agua.</p>
+                </div>
+                <span class="item-price">$4.800,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Licuado Tropical</span>
+                    <p class="item-description">Naranja, durazno y zanahoria.</p>
+                </div>
+                <span class="item-price">$5.000,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Licuado Detox</span>
+                    <p class="item-description">Manzana verde, espinaca, pepino y jengibre.</p>
+                </div>
+                <span class="item-price">$5.200,00</span>
+            </div>
+
+            <h3 class="subcategory-title" id="bebidas-gaseosas">Gaseosas 500ml</h3>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Coca-Cola</span>
+                </div>
+                <span class="item-price">$2.500,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Coca-Cola Zero</span>
+                </div>
+                <span class="item-price">$2.500,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Sprite</span>
+                </div>
+                <span class="item-price">$2.400,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Agua Mineral</span>
+                </div>
+                <span class="item-price">$2.000,00</span>
+            </div>
+
+            <h3 class="subcategory-title" id="bebidas-sin-alcohol">Sin alcohol</h3>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Agua Saborizada</span>
+                </div>
+                <span class="item-price">$2.200,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Soda</span>
+                </div>
+                <span class="item-price">$1.800,00</span>
+            </div>
+            <h3 class="subcategory-title" id="bebidas-copas">Copas</h3>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Vino Malbec (Copa)</span>
+                </div>
+                <span class="item-price">$4.000,00</span>
+            </div>
+            <h3 class="subcategory-title" id="bebidas-jarras">Jarras</h3>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Jarra de Limonada</span>
+                </div>
+                <span class="item-price">$8.000,00</span>
+            </div>
+        </section>
+
+        <section class="menu-category" id="desayunos-meriendas">
+            <h2 class="category-title">DESAYUNOS Y MERIENDAS</h2>
+            <h3 class="subcategory-title" id="desayunos-tostados">Tostados</h3>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Tostado de JyQ</span>
+                    <p class="item-description">Pan de campo, jamón y queso.</p>
+                </div>
+                <span class="item-price">$6.000,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Tostado de Verduras</span>
+                    <p class="item-description">Pan integral, espinaca, queso y tomates secos.</p>
+                </div>
+                <span class="item-price">$6.500,00</span>
+            </div>
+            <h3 class="subcategory-title" id="desayunos-tostadas">Tostadas</h3>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Tostadas con Mermelada y Manteca</span>
+                    <p class="item-description">3 rebanadas de pan de campo o integral.</p>
+                </div>
+                <span class="item-price">$4.500,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Tostadas con Palta y Huevo</span>
+                    <p class="item-description">2 rebanadas de pan de masa madre, palta pisada y huevo a la plancha.</p>
+                </div>
+                <span class="item-price">$7.000,00</span>
+            </div>
+            <h3 class="subcategory-title" id="desayunos-croissants">Croissants</h3>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Croissant Clásico</span>
+                </div>
+                <span class="item-price">$3.800,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Croissant de JyQ</span>
+                </div>
+                <span class="item-price">$4.500,00</span>
+            </div>
+            <h3 class="subcategory-title" id="desayunos-medialunas">Medialunas</h3>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Medialuna de Manteca</span>
+                </div>
+                <span class="item-price">$1.500,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Medialuna de Grasa</span>
+                </div>
+                <span class="item-price">$1.400,00</span>
+            </div>
+            <h3 class="subcategory-title" id="desayunos-huevos-revueltos">Huevos Revueltos</h3>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Huevos Revueltos Clásicos</span>
+                    <p class="item-description">Con tostadas de campo.</p>
+                </div>
+                <span class="item-price">$5.500,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Huevos Revueltos con Bacon</span>
+                    <p class="item-description">Con tostadas de campo y bacon crocante.</p>
+                </div>
+                <span class="item-price">$6.800,00</span>
+            </div>
+        </section>
+
+        <section class="menu-category" id="combos">
+            <h2 class="category-title">COMBOS</h2>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Combo Tradicional</span>
+                    <p class="item-description">Café con leche / Té + 2 medialunas o 2 tostadas con mermelada / DDL y manteca / queso crema + 1 copa de jugo de naranja.</p>
+                </div>
+                <span class="item-price">$12.500,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Combo Energizante</span>
+                    <p class="item-description">Americano / Cortado + Tostado de JyQ + 1 licuado de fruta (banana o frutilla).</p>
+                </div>
+                <span class="item-price">$15.000,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Combo Deli</span>
+                    <p class="item-description">Latte (vainilla/caramelo) / Mocaccino + 1 porción de Carrot Cake / Red Velvet + 1 agua mineral.</p>
+                </div>
+                <span class="item-price">$18.000,00</span>
+            </div>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Combo Fit</span>
+                    <p class="item-description">Té verde / Café negro + Tostadas con palta y huevo + 1 jugo multifruta.</p>
+                </div>
+                <span class="item-price">$17.500,00</span>
+            </div>
+        </section>
+
+        <section class="menu-category" id="sin-tacc">
+            <h2 class="category-title">SIN TACC</h2>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Brownie Sin TACC</span>
+                </div>
+                <span class="item-price">$7.000,00</span>
+            </div>
+        </section>
+
+        <section class="menu-category" id="promociones">
+            <h2 class="category-title">PROMOCIONES</h2>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Promo Amigos</span>
+                    <p class="item-description">2 Cafés con Leche + 4 Medialunas.</p>
+                </div>
+                <span class="item-price">$9.000,00</span>
+            </div>
+        </section>
+
+        <section class="menu-category" id="almuerzos">
+            <h2 class="category-title">ALMUERZOS</h2>
+            <h3 class="subcategory-title" id="almuerzos-bruschettas">Bruschettas</h3>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Bruschetta Caprese</span>
+                    <p class="item-description">Tomate, mozzarella, albahaca y pesto.</p>
+                </div>
+                <span class="item-price">$9.500,00</span>
+            </div>
+            <h3 class="subcategory-title" id="almuerzos-focaccias">Focaccias</h3>
+            <div class="menu-item">
+                <div class="item-info">
+                    <span class="item-name">Focaccia de Vegetales</span>
+                    <p class="item-description">Focaccia casera con vegetales asados y queso.</p>
+                </div>
+                <span class="item-price">$10.000,00</span>
+            </div>
+        </section>
+    </main>
+
+    <a href="https://wa.me/XXXXXXXXXXX?text=Hola%20quiero%20hacer%20una%20consulta" target="_blank" class="whatsapp-float-btn" aria-label="Contactar a Caffetos por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,644 @@
+/* Variables CSS */
+:root {
+    --color-darkest: #0A0A0A;
+    --color-dark: #1A1A1A;
+    --color-medium-dark: #2A2A2A;
+    --color-light-bg: #3A3A3A;
+    --color-text-primary: #E0E0E0;
+    --color-text-secondary: #AAAAAA;
+    --color-accent: #E0B07F;
+    --color-whatsapp: #25d366; /* Verde WhatsApp */
+    --color-whatsapp-light: #4AC968; /* Un verde un poco más claro para hover/detalle */
+
+
+    --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-size-base: 16px;
+
+    --header-height-desktop: 120px;
+    --header-height-mobile: 90px;
+    --sidebar-width-desktop: 280px;
+    --sidebar-width-mobile: 75vw;
+
+    --transition-speed: 0.4s;
+    --transition-timing: ease-in-out;
+    --border-radius: 8px;
+    --padding-base: 15px;
+}
+
+/* Reset y Estilos Base */
+body {
+    margin: 0;
+    font-family: var(--font-primary);
+    background-color: var(--color-darkest);
+    color: var(--color-text-primary);
+    overflow-x: hidden;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Header */
+.main-header {
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-base) 20px;
+    background-color: var(--color-medium-dark);
+    border-bottom: 1px solid var(--color-light-bg);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    height: var(--header-height-desktop);
+}
+
+.header-top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.header-branding {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 15px;
+    /* Por defecto, los elementos del branding estarán centrados */
+}
+
+/* Contenedor para el logo y el nombre del café */
+.header-branding-content {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Permite que este contenido ocupe el espacio */
+    justify-content: center; /* Centra el logo y nombre */
+    gap: 15px;
+}
+
+
+.menu-toggle {
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--color-text-primary);
+    padding: 8px 10px;
+    background: none;
+    border: none;
+    transition: color 0.2s var(--transition-timing);
+    border-radius: var(--border-radius);
+}
+
+.menu-toggle:hover {
+    color: var(--color-accent);
+    background-color: var(--color-light-bg);
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-dark);
+    border-radius: 25px;
+    padding: 8px 15px;
+    flex-grow: 1;
+    max-width: 600px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+    border: 1px solid var(--color-dark);
+}
+
+.search-bar:focus-within {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 2px rgba(224, 176, 127, 0.3);
+}
+
+.search-bar input {
+    border: none;
+    background: none;
+    color: var(--color-text-primary);
+    padding: 5px;
+    outline: none;
+    width: 100%;
+    font-size: var(--font-size-base);
+    line-height: 1;
+}
+
+.search-bar input::placeholder {
+    color: var(--color-text-secondary);
+    opacity: 0.8;
+}
+
+.search-bar i {
+    color: var(--color-text-secondary);
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.cafe-logo {
+    height: 60px;
+    border-radius: var(--border-radius);
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.cafe-name {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--color-text-primary);
+    text-align: center;
+    flex-grow: 1;
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    letter-spacing: 1px;
+}
+
+/* Icono de WhatsApp para móviles (dentro del header-branding) */
+.whatsapp-icon-mobile {
+    display: none; /* Oculto por defecto en desktop */
+    width: 40px; /* Tamaño del área del icono */
+    height: 40px; /* Tamaño del área del icono */
+    border-radius: 50%;
+    background-color: var(--color-whatsapp); /* Fondo verde */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px; /* Tamaño del icono */
+    transition: transform 0.2s var(--transition-timing), background-color 0.2s var(--transition-timing);
+    flex-shrink: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.whatsapp-icon-mobile i {
+    color: white; /* El icono en sí será blanco */
+}
+
+.whatsapp-icon-mobile:hover {
+    transform: scale(1.1);
+    background-color: var(--color-whatsapp-light); /* Un verde más claro al hover */
+}
+
+
+/* Sidebar (menú lateral) */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1001;
+    top: 0;
+    left: 0;
+    background-color: var(--color-dark);
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: width var(--transition-speed) var(--transition-timing);
+    padding-top: calc(var(--header-height-desktop) + 20px);
+    box-shadow: 2px 0 15px rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar.open {
+    width: var(--sidebar-width-desktop);
+}
+
+.close-sidebar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 28px;
+    color: var(--color-text-secondary);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    transition: color 0.2s var(--transition-timing);
+    border-radius: var(--border-radius);
+}
+
+.close-sidebar:hover {
+    color: var(--color-accent);
+    background-color: var(--color-light-bg);
+}
+
+.sidebar-menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.sidebar-menu-list > li {
+    border-bottom: 1px solid var(--color-light-bg);
+}
+
+.sidebar-menu-list > li:last-child {
+    border-bottom: none;
+}
+
+.sidebar-menu-list a {
+    display: block;
+    padding: 15px 25px;
+    font-size: 18px;
+    color: var(--color-text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-menu-list a:hover {
+    background-color: var(--color-light-bg);
+    color: var(--color-accent);
+}
+
+.sidebar-menu-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: var(--color-darkest);
+    border-top: 1px dashed var(--color-light-bg);
+}
+
+.sidebar-menu-list ul li a {
+    padding: 10px 25px 10px 45px;
+    font-size: 16px;
+    color: var(--color-text-secondary);
+}
+
+.sidebar-menu-list ul li a:hover {
+    background-color: var(--color-dark);
+    color: var(--color-accent);
+}
+
+/* Contenido principal */
+.content-wrapper {
+    margin-top: var(--header-height-desktop);
+    transition: margin-left var(--transition-speed) var(--transition-timing);
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-wrapper.shifted {
+    margin-left: calc(auto + var(--sidebar-width-desktop));
+}
+
+/* --- ESTILOS ESPECÍFICOS PARA EL MENÚ --- */
+.menu-category {
+    margin-bottom: 40px;
+    padding-top: 10px;
+}
+
+.category-title {
+    font-size: 24px;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-weight: bold;
+    padding-left: 5px;
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 12px;
+    text-shadow: 0 0 5px rgba(224, 176, 127, 0.4);
+    letter-spacing: 1.5px;
+}
+
+.subcategory-title {
+    font-size: 20px;
+    color: var(--color-text-primary);
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    padding-left: 5px;
+    border-bottom: 1px dashed var(--color-light-bg);
+    padding-bottom: 8px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 15px 10px;
+    border-bottom: 1px dashed var(--color-light-bg);
+    transition: background-color 0.2s var(--transition-timing);
+}
+
+.menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.menu-item:last-of-type {
+    border-bottom: none;
+}
+
+.item-info {
+    flex-grow: 1;
+    margin-right: 25px;
+}
+
+.item-name {
+    font-size: 19px;
+    font-weight: bold;
+    color: var(--color-text-primary);
+    margin: 0;
+}
+
+.item-description {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    margin-top: 8px;
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+.item-price {
+    font-size: 19px;
+    font-weight: bold;
+    color: var(--color-accent);
+    flex-shrink: 0;
+    margin-left: 15px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* --- BOTÓN DE WHATSAPP FLOTANTE (Desktop/Tablet) --- */
+.whatsapp-float-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: var(--color-whatsapp);
+    color: white; /* El ícono será blanco */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex; /* Para centrar el ícono */
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    z-index: 990;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.whatsapp-float-btn:hover {
+    transform: scale(1.1);
+    background-color: var(--color-whatsapp-light);
+}
+
+/* --- Estilos Responsive --- */
+
+/* Teléfonos y dispositivos pequeños (ancho hasta 767px) */
+@media screen and (max-width: 767px) {
+    .main-header {
+        padding: 10px 15px;
+        height: var(--header-height-mobile);
+    }
+
+    .header-top-bar {
+        margin-bottom: 5px;
+    }
+
+    .menu-toggle {
+        font-size: 24px;
+        padding: 6px 8px;
+    }
+
+    .search-bar {
+        max-width: none;
+        padding: 6px 10px;
+        border-radius: 20px;
+        /* El buscador ya ocupa todo el ancho disponible por flex-grow */
+    }
+
+    .search-bar input {
+        font-size: 14px;
+    }
+
+    .search-bar i {
+        font-size: 16px;
+        margin-right: 8px;
+    }
+
+    .header-branding {
+        flex-direction: row; /* Coloca logo y WhatsApp en fila */
+        justify-content: space-between; /* Espacia logo/nombre y WhatsApp */
+        align-items: center;
+        gap: 10px;
+    }
+
+    .header-branding-content {
+        flex-grow: 1; /* Permite que el logo y el nombre ocupen su espacio */
+        justify-content: flex-start; /* Alinea el logo y nombre a la izquierda */
+        gap: 10px;
+    }
+
+    .cafe-logo {
+        height: 45px;
+        margin-bottom: 0;
+        margin-right: 0; /* Eliminar margen derecho si existe */
+    }
+
+    .cafe-name {
+        font-size: 20px;
+        line-height: 1.2;
+        text-align: left;
+        flex-grow: 1; /* Asegura que ocupe el espacio */
+    }
+
+    /* Mostrar el icono de WhatsApp en el header en pantallas pequeñas */
+    .whatsapp-icon-mobile {
+        display: flex; /* Ahora siempre visible en móvil */
+        margin-left: auto; /* Empuja el icono a la derecha si es necesario */
+        font-size: 20px; /* Ajusta el tamaño del icono dentro del círculo */
+        width: 38px; /* Tamaño del círculo */
+        height: 38px;
+    }
+
+    /* Ocultar el botón flotante en pantallas pequeñas */
+    .whatsapp-float-btn {
+        display: none;
+    }
+
+    .sidebar {
+        padding-top: calc(var(--header-height-mobile) + 15px);
+        width: 0;
+    }
+
+    .sidebar.open {
+        width: var(--sidebar-width-mobile);
+    }
+
+    .close-sidebar {
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+    }
+
+    .sidebar-menu-list a {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+
+    .sidebar-menu-list ul li a {
+        padding: 8px 20px 8px 40px;
+        font-size: 14px;
+    }
+
+    .content-wrapper {
+        margin-top: var(--header-height-mobile);
+        padding: 15px;
+    }
+
+    .content-wrapper.shifted {
+        margin-left: 0;
+        transform: translateX(var(--sidebar-width-mobile));
+        width: 100%;
+        overflow-x: hidden;
+        position: relative;
+        left: 0;
+    }
+
+    .category-title {
+        font-size: 20px;
+        margin-bottom: 18px;
+        padding-bottom: 10px;
+    }
+
+    .subcategory-title {
+        font-size: 17px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .menu-item {
+        padding: 12px 0;
+    }
+
+    .item-name {
+        font-size: 17px;
+    }
+
+    .item-description {
+        font-size: 13px;
+        margin-top: 6px;
+    }
+
+    .item-price {
+        font-size: 17px;
+        margin-left: 10px;
+    }
+}
+
+/* Tablets (ancho entre 768px y 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .main-header {
+        padding: 15px 25px;
+        height: var(--header-height-desktop);
+    }
+
+    .menu-toggle {
+        font-size: 30px;
+    }
+
+    .search-bar {
+        max-width: 500px;
+        padding: 10px 18px;
+    }
+
+    .search-bar input {
+        font-size: 17px;
+    }
+
+    .cafe-logo {
+        height: 55px;
+    }
+
+    .cafe-name {
+        font-size: 26px;
+    }
+
+    /* Ocultar el icono móvil del header */
+    .whatsapp-icon-mobile {
+        display: none;
+    }
+
+    /* Mostrar el botón flotante en tablets */
+    .whatsapp-float-btn {
+        display: flex;
+        width: 55px;
+        height: 55px;
+        font-size: 30px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .sidebar.open {
+        width: var(--sidebar-width-desktop);
+    }
+
+    .sidebar-menu-list a {
+        font-size: 19px;
+        padding: 18px 30px;
+    }
+
+    .sidebar-menu-list ul li a {
+        padding: 12px 30px 12px 50px;
+        font-size: 16px;
+    }
+
+    .content-wrapper {
+        margin-top: var(--header-height-desktop);
+        padding: 25px;
+    }
+
+    .content-wrapper.shifted {
+        margin-left: calc(auto + var(--sidebar-width-desktop));
+    }
+
+    .category-title {
+        font-size: 22px;
+    }
+
+    .subcategory-title {
+        font-size: 19px;
+    }
+
+    .item-name {
+        font-size: 18px;
+    }
+
+    .item-description {
+        font-size: 14px;
+    }
+
+    .item-price {
+        font-size: 18px;
+    }
+}
+
+/* Desktops y Macs (ancho mayor a 1024px) */
+@media screen and (min-width: 1025px) {
+    .main-header {
+        height: var(--header-height-desktop);
+    }
+    .content-wrapper.shifted {
+        margin-left: calc(50% - (900px / 2) + (var(--sidebar-width-desktop) / 2));
+        max-width: 900px;
+    }
+
+    /* Ocultar el icono móvil del header */
+    .whatsapp-icon-mobile {
+        display: none;
+    }
+
+    /* Mostrar el botón flotante en desktops */
+    .whatsapp-float-btn {
+        display: flex;
+    }
+}
